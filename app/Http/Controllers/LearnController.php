@@ -15,4 +15,7 @@ class LearnController extends Controller
        // Data collect from Database
        return 'This is invock method';
     }
+    public function hello(){
+        return 'Example';
+    }
 }

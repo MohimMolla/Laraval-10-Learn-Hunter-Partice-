@@ -10,6 +10,12 @@
 	
 </head>
 <body>
+@guest
+
+
+	@else
+
+
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -28,7 +34,7 @@
 						<a class="nav-link" href="{{url('contact')}}">Contact</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{url('country')}}">Country</a>
+						<a class="nav-link" href="{{url('/country')}}">Country</a>
 					</li>
 					{{-- <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,11 +63,13 @@
 						<li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
 						<li><a class="dropdown-item" href="{{route('register')}}">Registration</a></li>
 						<li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
+						<li><a class="dropdown-item" href="{{route('dashboard')}}">Dashbord</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</nav>
+	@endguest
 	@yield('content')
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
